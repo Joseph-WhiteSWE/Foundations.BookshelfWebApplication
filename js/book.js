@@ -31,11 +31,6 @@ class Book
         commentBtn.classList.add('comment')
         commentBtn.innerText = 'Comment'
 
-        commentBtn.addEventListener('click', () => 
-        {
-            commentInput.style.display = 'block'
-        });
-
         //comment section 
         let commentInput = document.createElement('input')
         commentInput.classList.add('cmtInput')
@@ -46,12 +41,24 @@ class Book
         commentInput.style.display = 'none'
         commentInput.style.borderRadius = '10px'
 
+        let submitBtn = document.createElement('button')
+        submitBtn.classList.add('submit')
+        submitBtn.innerText = 'Submit'
+        submitBtn.style.display = 'none'
+
+        commentBtn.addEventListener('click', () => 
+        {
+            commentInput.style.display = 'block'
+            submitBtn.style.display = 'block'
+        });
+
         card.append(author)
         card.append(language)
         card.append(subject)
         card.append(title)
         card.append(commentBtn)
         card.append(commentInput)
+        card.append(submitBtn)
 
         return card
 
