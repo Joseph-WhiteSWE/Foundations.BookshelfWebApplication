@@ -1,0 +1,32 @@
+header
+{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	background-color: black;
+	color: white;
+	font-family: monospace, sans-serif;
+	padding: 10px;
+}
+
+nav a 
+{
+	margin: 1rem;
+	text-decoration: none;
+	color: white;
+}
+
+a:hover 
+{
+	text-decoration: underline;
+	color: white;
+}
+
+body 
+{
+	margin: 0;
+}
+
+.user{
+    margin: .5rem
+}

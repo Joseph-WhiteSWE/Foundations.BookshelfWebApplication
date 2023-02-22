@@ -9,9 +9,9 @@ Navigation
 (2) No real information is required. Dummy data or lorum ipsum is fine!
 
 Add Books
-(1) Users can enter book title, author, subjects, language and add new Books.
-(2) The Bookshelf instance is updated accordingly.
-(3) The Bookshelf instance renders Books accurately.
+($) Users can enter book title, author, subjects, language and add new Books.
+($) The Bookshelf instance is updated accordingly.
+($) The Bookshelf instance renders Books accurately.
 
 Comments
 (1) Users can leave comments no longer than 280 characters on any Book they want.
