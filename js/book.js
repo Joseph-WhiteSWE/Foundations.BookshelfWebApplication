@@ -25,10 +25,21 @@ class Book
         let title = document.createElement('li')
         title.innerText = this.title
 
+        let commentBtn = document.createElement('button')
+        commentBtn.classList.add('comment')
+        commentBtn.style.height = '25px'
+        commentBtn.style.width = '75px'
+        commentBtn.innerText = 'comment'
+
+        //create comment button here
+        //then target comment button with queryselector and addeventlisteners when clicked
+
         card.append(author)
         card.append(language)
         card.append(subject)
         card.append(title)
+        card.append(commentBtn)
+
 
         return card
 
