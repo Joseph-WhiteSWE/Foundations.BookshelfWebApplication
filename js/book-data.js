@@ -1,5 +1,5 @@
-const bookData = 
-[
+const bookData =
+  [
     {
       author: ["Burroughs, Edgar Rice"],
       language: "en",
@@ -54,4 +54,4 @@ const bookData =
       ],
       title: "The Story of Doctor Dolittle",
     },
-]
+  ]

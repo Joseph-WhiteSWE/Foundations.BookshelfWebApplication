@@ -14,8 +14,6 @@ for (const bookinBookData of bookData)
 }
 library.render()
 
-//Add Books section 
-
 let addBtn = document.getElementById('add-btn')
 addBtn.addEventListener('click', () => 
 {

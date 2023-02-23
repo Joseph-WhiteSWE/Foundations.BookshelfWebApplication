@@ -25,13 +25,13 @@ class Book
         let title = document.createElement('li')
         title.innerText = this.title
 
-        //create comment button here
-        //then target comment button with addeventlisteners when clicked
+        //comment button section
         let commentBtn = document.createElement('button')
-        commentBtn.classList.add('comment')
+        commentBtn.classList.add('cmtbtn')
         commentBtn.innerText = 'Comment'
+        //-------------------- new code underneath
 
-        //comment section 
+        //user input section 
         let commentInput = document.createElement('input')
         commentInput.classList.add('cmtInput')
         commentInput.type = 'text';
@@ -40,16 +40,35 @@ class Book
         commentInput.style.width = '300px'
         commentInput.style.display = 'none'
         commentInput.style.borderRadius = '10px'
+        //-------------------- new code underneath
 
-        let submitBtn = document.createElement('button')
-        submitBtn.classList.add('submit')
-        submitBtn.innerText = 'Submit'
-        submitBtn.style.display = 'none'
+        //submit button section 
+        let sendBtn = document.createElement('button')
+        sendBtn.classList.add('submit')
+        sendBtn.innerText = 'Send'
+        sendBtn.style.display = 'none'
+        //-------------------- new code underneath
+
+        let commentSection = document.createElement('div'); // new
 
         commentBtn.addEventListener('click', () => 
         {
+            commentInput.value = ''; // new
             commentInput.style.display = 'block'
-            submitBtn.style.display = 'block'
+            sendBtn.style.display = 'block'
+        });
+        //-------------------- new code underneath
+
+        sendBtn.addEventListener('click', () => // new
+        {
+            let commentText = commentInput.value; // new
+            commentInput.style.display = 'none'; // new
+            sendBtn.style.display = 'none'; // new
+
+            let comment = document.createElement('p'); // new
+            comment.classList.add('cmtIput') // new
+            comment.innerText = commentText; // new
+            commentSection.appendChild(comment); // new
         });
 
         card.append(author)
@@ -58,7 +77,9 @@ class Book
         card.append(title)
         card.append(commentBtn)
         card.append(commentInput)
-        card.append(submitBtn)
+        card.append(sendBtn)
+        //-------------------- new code underneath
+        card.append(commentSection)
 
         return card
 

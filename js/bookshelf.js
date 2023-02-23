@@ -10,10 +10,6 @@ class Bookshelf
         this.books.push(book)
     }
 
-    //addBookToBookshelf(book){ 1hr mark on https://www.youtube.com/watch?v=k1eaLfoDY_E&ab_channel=FullstackAcademyPrograms
-    //example
-    //}
-
     render() 
     {
         let cardRender = this.books.map((book) => book.render())
