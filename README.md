@@ -1,8 +1,8 @@
 # Foundations.BookshelfWebApplication
 
 General Code
-(1) Design choices are explained and documented in comments.
-(2) DOM elements are styled via CSS.
+($) Design choices are explained and documented in comments.
+($) DOM elements are styled via CSS.
 
 Navigation
 ($) A Navigation Bar is included in the web app with links to other parts of the site e.g. "About", "Contact".

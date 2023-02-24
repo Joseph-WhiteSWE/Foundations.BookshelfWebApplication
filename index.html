@@ -8,18 +8,24 @@
 	<body>
 		<header>
 			<nav id="title">Bookshelf Web Application</nav>
-			<button id="en-btn">English</button>
-			<button id="gr-btn">German</button>
-			<button id="fr-btn">French</button>
-			<button id="fn-btn">Finnish</button>
+			<div>
+				<!--Filter Buttons-->
+				Filter By Language
+				<button id="en-btn">English</button>
+				<button id="gr-btn">German</button>
+				<button id="fr-btn">French</button>
+				<button id="fn-btn">Finnish</button>
+			</div>
+
 			<nav>
+				<!--Nav Links -->
 				<a href="index.html">Home</a>
 				<a href="about.html">About</a>
 				<a href="contact.html">Contact</a>
 			</nav>
 		</header>
 		<main>
-			<!--Input Section-->
+			<!--Add Book/Language Filter Section-->
 			<input type="text" id="book-author" class="user" placeholder="Author" />
 			<select id="book-lang" name="languages">
 				<option value="en">English</option>
@@ -27,7 +33,6 @@
 				<option value="fr">French</option>
 				<option value="fn">Finnish</option>
 			</select>
-			<input type="text" id="book-lang" class="user" placeholder="Language" />
 			<input type="text" id="book-subject" class="user" placeholder="Subject" />
 			<input type="text" id="book-title" class="user" placeholder="Title" />
 
@@ -35,8 +40,6 @@
 
 			<section id="booklist"></section>
 		</main>
-		<footer></footer>
-
 		<script src="js/book-data.js"></script>
 		<script src="js/book.js"></script>
 		<script src="js/bookshelf.js"></script>

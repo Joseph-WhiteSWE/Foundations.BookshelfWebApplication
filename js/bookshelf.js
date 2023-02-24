@@ -2,6 +2,7 @@ class Bookshelf
 {
     constructor() 
     {
+        // creates an empty array and pushes a parameter into it 
         this.books = []
     }
 
@@ -12,10 +13,12 @@ class Bookshelf
 
     render() 
     {
+        //iterates over this.books array and renders the book parameter
         let cardRender = this.books.map((book) => book.render())
         let bookSection = document.querySelector('#booklist')
         bookSection.innerHTML = '';
 
+        //loops over this.books array and appends it to the section element
         for (let card of cardRender) 
         {
             bookSection.append(card)
@@ -25,13 +28,14 @@ class Bookshelf
     }
     renderByLang(lang) 
     {
+        //filters the book according book language
         let bookSection = document.querySelector('#booklist')
         bookSection.innerText = ""
 
         let filteredBooks = this.books.filter((book) => book.language == lang)
-        for (let book of filteredBooks )
+        for (let book of filteredBooks) 
         {
-                bookSection.append(book.render())
+            bookSection.append(book.render())
         }
     }
 }
