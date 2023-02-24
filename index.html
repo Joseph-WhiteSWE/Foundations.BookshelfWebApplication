@@ -8,23 +8,32 @@
 	<body>
 		<header>
 			<nav id="title">Bookshelf Web Application</nav>
+			<button id="en-btn">English</button>
+			<button id="gr-btn">German</button>
+			<button id="fr-btn">French</button>
+			<button id="fn-btn">Finnish</button>
 			<nav>
 				<a href="index.html">Home</a>
 				<a href="about.html">About</a>
 				<a href="contact.html">Contact</a>
 			</nav>
 		</header>
-		<main> 
+		<main>
 			<!--Input Section-->
-			<input type="text" id="book-author" class="user" placeholder="Author" style="font-family: monospace, sans-serif;">
-			<input type="text" id="book-lang" class="user" placeholder="Language" style="font-family: monospace, sans-serif;">
-			<input type="text" id="book-subject" class="user" placeholder="Subject" style="font-family: monospace, sans-serif;">
-			<input type="text" id="book-title" class="user" placeholder="Title" style="font-family: monospace, sans-serif;">
-			
-			<button id="add-btn" class="user" style="font-family: monospace, sans-serif;">Add New Book</button>
+			<input type="text" id="book-author" class="user" placeholder="Author" />
+			<select id="book-lang" name="languages">
+				<option value="en">English</option>
+				<option value="gr">German</option>
+				<option value="fr">French</option>
+				<option value="fn">Finnish</option>
+			</select>
+			<input type="text" id="book-lang" class="user" placeholder="Language" />
+			<input type="text" id="book-subject" class="user" placeholder="Subject" />
+			<input type="text" id="book-title" class="user" placeholder="Title" />
 
-			<section id="booklist"></section> 
+			<button id="add-btn" class="user">Add New Book</button>
 
+			<section id="booklist"></section>
 		</main>
 		<footer></footer>
 

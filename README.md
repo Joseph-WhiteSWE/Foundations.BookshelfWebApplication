@@ -6,7 +6,7 @@ General Code
 
 Navigation
 ($) A Navigation Bar is included in the web app with links to other parts of the site e.g. "About", "Contact".
-(2) No real information is required. Dummy data or lorum ipsum is fine!
+($) No real information is required. Dummy data or lorum ipsum is fine!
 
 Add Books
 ($) Users can enter book title, author, subjects, language and add new Books.
@@ -14,10 +14,13 @@ Add Books
 ($) The Bookshelf instance renders Books accurately.
 
 Comments
-(1) Users can leave comments no longer than 280 characters on any Book they want.
-(2) Users can press a "Comment" button which reveals a `text` input element. Users can then type their comment and click "send" to add it to the Book.
-(3) The Book and Bookshelf instances are updated accordingly.
-(4) The comments persist even if a search or sort rerenders the Books.
-(5) Data can be stored locally or in state memory. A database is not required.
+($) Users can leave comments no longer than 280 characters on any Book they want.
+($) Users can press a "Comment" button which reveals a `text` input element. Users can then type their comment and click "send" to add it to the Book.
+($) The Book and Bookshelf instances are updated accordingly.
+($) The comments persist even if a search or sort rerenders the Books.
 
-TDD 5 Alternate: use the `filter` method on search terms so that the word "THE" doesn't affect any search term outcomes
+TDD 5 Alternate: create four buttons for English, French, German and Finnish. When you click any of the buttons, the button should use the `filter` method to only display the bookshelf data that matches that language. Language codes are listed below.
+en => English
+de => German
+fr => French
+fi => Finnish

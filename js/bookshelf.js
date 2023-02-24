@@ -23,4 +23,15 @@ class Bookshelf
 
         return cardRender
     }
+    renderByLang(lang) 
+    {
+        let bookSection = document.querySelector('#booklist')
+        bookSection.innerText = ""
+
+        let filteredBooks = this.books.filter((book) => book.language == lang)
+        for (let book of filteredBooks )
+        {
+                bookSection.append(book.render())
+        }
+    }
 }

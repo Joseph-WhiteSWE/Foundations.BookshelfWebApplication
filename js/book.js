@@ -1,15 +1,13 @@
-class Book 
-{
-    constructor(author, language, subject, title) 
-    {
+class Book {
+    constructor(author, language, subject, title, comments) {
         this.author = author
         this.language = language
         this.subject = subject
         this.title = title
+        this.comments = comments
     }
 
-    render() 
-    {
+    render() {
         let card = document.createElement('section')
         card.classList.add('card')
 
@@ -25,6 +23,10 @@ class Book
         let title = document.createElement('li')
         title.innerText = this.title
 
+        let comment = document.createElement('li')
+        comment.innerText = this.comments
+        comment.classList.add('cmtInput')
+
         //comment button section
         let commentBtn = document.createElement('button')
         commentBtn.classList.add('cmtbtn')
@@ -33,7 +35,7 @@ class Book
 
         //user input section 
         let commentInput = document.createElement('input')
-        commentInput.classList.add('cmtInput')
+        commentInput.id = ('book-comment')
         commentInput.type = 'text';
         commentInput.maxLength = 280;
         commentInput.style.height = '100px'
@@ -51,13 +53,13 @@ class Book
 
         let commentSection = document.createElement('div'); // new
 
-        commentBtn.addEventListener('click', () => 
-        {
+        commentBtn.addEventListener('click', () => {
             commentInput.value = ''; // new
             commentInput.style.display = 'block'
             sendBtn.style.display = 'block'
+            //-------------------- new code underneath
+
         });
-        //-------------------- new code underneath
 
         sendBtn.addEventListener('click', () => // new
         {
@@ -66,9 +68,11 @@ class Book
             sendBtn.style.display = 'none'; // new
 
             let comment = document.createElement('p'); // new
-            comment.classList.add('cmtIput') // new
+            comment.classList.add('cmtInput') // new
             comment.innerText = commentText; // new
+            commentSection.innerText = ""
             commentSection.appendChild(comment); // new
+            this.comments = commentText
         });
 
         card.append(author)
@@ -76,13 +80,13 @@ class Book
         card.append(subject)
         card.append(title)
         card.append(commentBtn)
+        card.append(comment)
         card.append(commentInput)
         card.append(sendBtn)
         //-------------------- new code underneath
         card.append(commentSection)
 
         return card
-
     }
 
 }
